@@ -1,0 +1,39 @@
+rainingsince:
+  web:
+    version-enable: true
+
+spring:
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: GMT+8
+jasypt:
+  encryptor:
+    password: eszxdrtfc!!!
+server:
+  port: 8001
+  servlet:
+    context-path: /api/system
+
+
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://47.104.158.140:3306/rs-system?characterEncoding=utf-8&useSSL=false
+    username: ENC(3kodtUkYUR9V+6fO9o/Y9w==)
+    password: ENC(eAkXPO+QQQrK7BWvaCirSl5ei7zXLS9M)
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+---
+spring:
+  profiles: pro
+  datasource:
+    url: jdbc:mysql://47.104.158.140:3306/rs-system?characterEncoding=utf-8&useSSL=false
+    username: ENC(3kodtUkYUR9V+6fO9o/Y9w==)
+    password: ENC(eAkXPO+QQQrK7BWvaCirSl5ei7zXLS9M)
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
